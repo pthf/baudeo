@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Baudeo</title>
+
+  <!-- JQuery  -->
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/hover-min.css">
+  <link rel="stylesheet" href="./css/animate.css">
+
+  <!-- JavaScript -->
+  <script type="text/javascript" src="js/animate.js"></script>
+  <script type="text/javascript" src="js/hover_boxes.js"></script>
+  <script type="text/javascript" src="js/popup_port.js"></script>
+
+</head>
+<body>
+
+  <!-- Desktop Menu  -->
+  <header class="bar">
+    <a href="index.html" class="Bar_Menu hvr-float"><img class="Logo_Menu" src="img/LogoMenu.svg"/></a>
+      <ul class="bar-list">
+        <a href="filosofia.html" class="hvr-hang"><li class="bar-list-item">FILOSOFÍA</li></a>
+        <a href="servicios.html" class="hvr-hang"><li class="bar-list-item">SERVICIOS</li></a>
+        <a href="portafolio.html" class="hvr-hang"><li class="bar-list-item">PORTAFOLIO</li></a>
+        <a href="contacto.html" class="hvr-hang"><li class="bar-list-item">CONTACTO</li></a>
+      </ul>
+  </header>
+
+  <span class="nav-icon">&#9776;</span>
+    <ul class="mobile-nav animated">
+      <a href="filosofia.html"><li class="">FILOSOFÍA</li></a>
+      <a href="servicios.html"><li class="">SERVICIOS</li></a>
+      <a href="portafolio.html"><li class="">PORTAFOLIO</li></a>
+      <a href="contacto.html"><li class="">CONTACTO</li></a>
+    </ul>
+
+  <script type="text/javascript">
+      var icon = document.querySelector('.nav-icon');
+      var show = false;
+
+      icon.onclick = function() {
+
+      if (show) {
+        $('.mobile-nav').removeClass('slideInDown');
+        $('.mobile-nav').addClass('slideOutUp');
+      }else{
+        $('.mobile-nav').addClass('is-show');
+        $('.mobile-nav').addClass('slideInDown');
+        $('.mobile-nav').removeClass('slideOutUp');
+      }
+      show=!show;
+    }
+  </script>
+
+
+  <!-- Slider y logo -->
+  <section class="top">
+
+    <!-- Logo sobre el slider -->
+    <div class="Logo_Slider animated fadeIn">
+        <img src="img/LogoSlider.svg"/>
+    </div>
+
+    <!-- Slider  -->
+    <div id="slideshow">
+        <!-- Slides -->
+       <div> <img src="img/Slider1.png"/> </div>
+       <div> <img src="img/Slider2.png"/> </div>
+       <div> <img src="img/Slider3.png"/> </div>
+       <div> <img src="img/Slider4.png"/> </div>
+       <div> <img src="img/Slider5.png"/> </div>
+    </div>
+
+  </section>
+
+  <!-- Contenido central -->
+  <section class="middle">
+
+    <div class="middle-top">
+      <h1 class="middle-top-title home-title">NOSOTROS</h1>
+    </div>
+
+    <div class="middle-mid">
+
+      <p class="middle-text">
+        <i>Un detalle es una demostración del esfuerzo que se pone en el
+        proyecto que se ejecuta.</i> <br><br>
+        En BAUDEO creemos que tanto en el diseño de nuestros proyectos y
+        principalmente, en la construcción de los mismos,  la atención a los
+        detalles y acabados lo es todo.
+        Buscamos detalles que armonicen en la ejecución de arquitecturas
+        singulares, con lenguajes y materiales contemporáneos que expresen
+        el carácter de quien lo diseña y de quien lo vive.
+        Cada elemento integrado en la conceptualización de la obra, crece y
+        madura en el proceso en el que el equipo conoce al cliente, su
+        personalidad, gustos y motivaciones, haciendo de él, un proyecto
+        único.
+      </p>
+
+      <img class="logo-mid logo-index" src="img/LogoSlider.svg"/>
+
+    </div>
+
+  </section>
+
+  <!-- Display de servicios -->
+  <section class="bottom">
+    <div class="bottom-top">
+      <h2>SERVICIOS</h2>
+    </div>
+  </section>
+
+  <!-- Cajas con descripcion de servicios -->
+  <ul id="Grid">
+
+    <li class="item-port first-item test-opacity">
+      <div class="item-port-content">
+        <img class="item-port-img hvr-grow" src="img/img8.png"/>
+        <span class="item-info">Diseño arquitectónico</span>
+      </div>
+    </li>
+
+    <li class="item-port second-item test-opacity">
+      <div class="item-port-content">
+        <img class="item-port-img hvr-grow" src="img/img2.png"/>
+        <span class="item-info">Construcción</span>
+      </div>
+    </li>
+
+    <li class="item-port third-item test-opacity">
+      <div class="item-port-content">
+        <img class="item-port-img hvr-grow" src="img/img3.png"/>
+        <span class="item-info">Plan Residencial Total</span>
+      </div>
+    </li>
+
+  </ul>
+
+  <!-- Popup window -->
+  <div class="background-filter"></div>
+  <div class="popup_window">
+    <div class="info-left">
+      <span class="title-info"> INTERIORISMO</span>
+
+
+      <p class="text-info">
+        <i>Proyectos únicos que permanecen en el tiempo.</i> <br> <br>
+        En BAUDEO creemos que antes de iniciar una construcción es
+        importante contar con un proyecto arquitectónico profesional, con el
+        perfecto balance entre diseño, aprovechamiento de espacios y
+        recursos. <br><br>
+        Nuestro objetivo es lograr proyectos funcionales, estéticos y
+        principalmente, propositivos. <br><br>
+        La atención a los detalles es esencial en cada diseño.
+        Por ello nos dedicamos a trabajar cuidadosamente contigo para que tu
+        proyecto refleje tu estilo de vida; siendo fieles a nuestra filosofía,
+        “diseñar y construir de forma única”.
+      </p>
+    </div>
+
+    <div class="info-right">
+      <div class="img-info"><img src="img/img11.png"/></div>
+      <a class="close-info"><img src="img/close_image-01.png"/></a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <section class="footer">
+    <div class="footer-top">
+      <div class="footer-top-right">
+        <img class="Logo_Footer" src="img/LogoMenu.svg"/>  <br><br>
+
+        <a href=""><img class="social_icon" src="img/twitter.svg"/></a>
+        <a href=""><img class="social_icon" src="img/instagram.svg"/></a>
+        <a href=""><img class="social_icon" src="img/facebook.svg"/></a>
+        <br><br>
+
+        <span>Dirección 1971 int. 6</span> <br>
+        <span>Fracc. Andares</span> <br>
+        <span>Guadalajara, Jal, México</span> <br>
+        <span>33333 333 333</span> <br>
+        <span>arquitecto@contacto.com</span> <br>
+      </div>
+
+      <div class="footer-top-left">
+          <ul>
+            <li class="menu-title">MENU</li>
+            <a href="index.html"><li>HOME</li></a>
+            <a href="filosofia.html"><li>FILOSOFÍA</li></a>
+            <a href="servicios.html"><li>SERVICIOS</li></a>
+            <a href="portafolio.html"><li>PORTAFOLIO</li></a>
+            <a href="contacto.html"><li>CONTACTO</li></a>
+          </ul>
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+        <span class="footer-text">©1996-2015 Baudeo Arquitectos</span>
+    </div>
+
+  </section>
+
+  <!-- Script slider -->
+  <script type="text/javascript">
+    $("#slideshow > div:gt(0)").hide();
+
+    setInterval(function() {
+    $('#slideshow > div:first')
+      .fadeOut(3000)
+      .next()
+      .fadeIn(5000)
+      .end()
+      .appendTo('#slideshow');
+    },  3000);
+  </script>
+
+  <!-- Script menu responsive -->
+  <script type="text/javascript">
+
+    $(document).on("click", ".hambuger-icon", function(){
+        $(".bar-mobile").css({
+          "opacity" : "1",
+          "z-index" : "8",
+        });
+      return false;
+      });
+
+  </script>
+
+</body>
+</html>

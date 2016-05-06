@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Baudeo</title>
+
+  <!-- JQuery -->
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/hover-min.css">
+  <link rel="stylesheet" href="./css/animate.css">
+
+  <!-- JavaScript -->
+  <script type="text/javascript" src="js/animate_fil.js"></script>
+</head>
+<body>
+
+  <!-- Desktop Menu -->
+  <header class="bar">
+    <a href="index.html" class="Bar_Menu hvr-float"><img class="Logo_Menu" src="img/LogoMenu.svg"/></a>
+      <ul class="bar-list">
+        <a href="filosofia.html" class="hvr-hang"><li class="bar-list-item selected-item">FILOSOFÍA</li></a>
+        <a href="servicios.html" class="hvr-hang"><li class="bar-list-item">SERVICIOS</li></a>
+        <a href="portafolio.html" class="hvr-hang"><li class="bar-list-item">PORTAFOLIO</li></a>
+        <a href="contacto.html" class="hvr-hang"><li class="bar-list-item">CONTACTO</li></a>
+      </ul>
+  </header>
+
+  <span class="nav-icon">&#9776;</span>
+    <ul class="mobile-nav animated">
+      <a href="filosofia.html"><li class="selected-item-mobile">FILOSOFÍA</li></a>
+      <a href="servicios.html"><li class="">SERVICIOS</li></a>
+      <a href="portafolio.html"><li class="">PORTAFOLIO</li></a>
+      <a href="contacto.html"><li class="">CONTACTO</li></a>
+    </ul>
+
+  <script type="text/javascript">
+      // Animaciones en el menu de moviles
+      var icon = document.querySelector('.nav-icon');
+      var show = false;
+
+      icon.onclick = function() {
+
+      if (show) {
+        $('.mobile-nav').removeClass('slideInDown');
+        $('.mobile-nav').addClass('slideOutUp');
+      }else{
+        $('.mobile-nav').addClass('is-show');
+        $('.mobile-nav').addClass('slideInDown');
+        $('.mobile-nav').removeClass('slideOutUp');
+      }
+      show=!show;
+    }
+  </script>
+
+  <!-- Logo  -->
+  <section class="top">
+
+    <div class="Logo_Slider animated fadeIn">
+        <img src="img/filosofia.svg"/>
+    </div>
+
+    <div id="slideshow">
+       <div>
+          <img src="img/Slider2.png"/>
+       </div>
+
+    </div>
+
+  </section>
+
+  <!-- Seccion de contenido 1 -->
+  <section class="middle filosofia">
+    <div class="middle-top fil-top">
+      <img class="Logo_Menu middle-top-title fil-title" src="img/LogoMenu.svg"/>
+    </div>
+
+    <div class="middle-mid filosofia-mid">
+      <p class="text-fil first-text">
+      We create inspiring, sustainable environments that improve the human experience. <br><br>
+      Our designs are guided by a conviction that creating quality environments that
+      integrate people with nature has a positive effect on the quality of our lives. <br><br>
+      The firm works at a variety of scales, from a modest house to city master plans.
+      Our practice has extensive experience in multiple building types including housing,
+      workplace, educational, government, health, retail, mixed use, planning, interior,
+      institutional and high-tech facilities. Since the firm’s inception in 1995,
+      Rob Paulus Architects has received more than 60 local, regional and national
+      awards and has been widely published nationally and internationally.
+      </p>
+      <div class="img-fil first-img ">
+        <img src="img/img4.png"/>
+      </div>
+    </div>
+
+    <div class="middle-mid bottom-fil">
+      <p class="text-fil second-text">
+        We create inspiring, sustainable environments that improve the human experience. <br><br>
+        Our designs are guided by a conviction that creating quality environments that
+        integrate people with nature has a positive effect on the quality of our lives. <br><br>
+        The firm works at a variety of scales, from a modest house to city master plans.
+        Our practice has extensive experience in multiple building types including housing,
+        workplace, educational, government, health, retail, mixed use, planning, interior,
+        institutional and high-tech facilities. Since the firm’s inception in 1995,
+        Rob Paulus Architects has received more than 60 local, regional and national
+        awards and has been widely published nationally and internationally.
+      </p>
+
+      <div class="img-fil second-img">
+        <img src="img/img8.png"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seccion de contenido 2 -->
+  <section class="filosofia-bottom">
+    <span class="filosofia-title">CONÓCE NUESTRO TRABAJO</span>
+      <p class="filosofia-subtitle">
+        Our designs are guided by a conviction that creating quality environments that integrate people with nature has a positive effect on the quality of our lives
+      </p>
+
+      <a href="portafolio.html" class="filosofia-contact hvr-border-fade">Portafolio</a>
+  </section>
+
+  <!-- Footer -->
+  <section class="footer">
+    <div class="footer-top">
+      <div class="footer-top-right">
+        <img class="Logo_Footer" src="img/LogoMenu.svg"/>  <br><br>
+
+        <a href=""><img class="social_icon" src="img/twitter.svg"/></a>
+        <a href=""><img class="social_icon" src="img/instagram.svg"/></a>
+        <a href=""><img class="social_icon" src="img/facebook.svg"/></a>
+        <br><br>
+
+        <span>Dirección 1971 int. 6</span> <br>
+        <span>Fracc. Andares</span> <br>
+        <span>Guadalajara, Jal, México</span> <br>
+        <span>33333 333 333</span> <br>
+        <span>arquitecto@contacto.com</span> <br>
+      </div>
+
+      <div class="footer-top-left">
+          <ul>
+            <li class="menu-title">MENU</li>
+            <a href="index.html"><li>HOME</li></a>
+            <a href="filosofia.html"><li>FILOSOFÍA</li></a>
+            <a href="servicios.html"><li>SERVICIOS</li></a>
+            <a href="portafolio.html"><li>PORTAFOLIO</li></a>
+            <a href="contacto.html"><li>CONTACTO</li></a>
+          </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <span class="footer-text">©1996-2015 Baudeo Arquitectos</span>
+    </div>
+
+  </section>
+
+</body>
+</html>

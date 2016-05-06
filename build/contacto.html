@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Baudeo</title>
+
+  <!-- JQuery -->
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/hover-min.css">
+  <link rel="stylesheet" href="./css/animate.css">
+
+  <!-- JavaScript -->
+  <script type="text/javascript" src="js/animate_cont.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script type="text/javascript" src="/js/google_api.js"></script>
+
+</head>
+<body>
+
+  <!-- Desktop Menu  -->
+  <header class="bar">
+    <a href="index.html" class="Bar_Menu hvr-float"><img class="Logo_Menu" src="img/LogoMenu.svg"/></a>
+      <ul class="bar-list">
+        <a href="filosofia.html" class="hvr-hang"><li class="bar-list-item">FILOSOFÍA</li></a>
+        <a href="servicios.html" class="hvr-hang"><li class="bar-list-item">SERVICIOS</li></a>
+        <a href="portafolio.html" class="hvr-hang"><li class="bar-list-item">PORTAFOLIO</li></a>
+        <a href="contacto.html" class="hvr-hang selected-item-mobile"><li class="bar-list-item selected-item">CONTACTO</li></a>
+      </ul>
+  </header>
+
+  <span class="nav-icon">&#9776;</span>
+    <ul class="mobile-nav animated">
+      <a href="filosofia.html"><li class="">FILOSOFÍA</li></a>
+      <a href="servicios.html"><li class="">SERVICIOS</li></a>
+      <a href="portafolio.html"><li class="">PORTAFOLIO</li></a>
+      <a href="contacto.html"><li class="selected-item-mobile">CONTACTO</li></a>
+    </ul>
+
+  <script type="text/javascript">
+      // Animaciones en el menu de moviles
+      var icon = document.querySelector('.nav-icon');
+      var show = false;
+
+      icon.onclick = function() {
+
+      if (show) {
+        $('.mobile-nav').removeClass('slideInDown');
+        $('.mobile-nav').addClass('slideOutUp');
+      }else{
+        $('.mobile-nav').addClass('is-show');
+        $('.mobile-nav').addClass('slideInDown');
+        $('.mobile-nav').removeClass('slideOutUp');
+      }
+      show=!show;
+    }
+  </script>
+
+  <!-- Logo  -->
+  <section class="top">
+
+    <div class="Logo_Slider animated fadeIn">
+        <img src="img/contacto.svg"/>
+    </div>
+
+    <div id="slideshow">
+       <div>
+          <img src="img/Slider5.png"/>
+       </div>
+
+    </div>
+
+  </section>
+
+  <!-- Formulario de contacto -->
+  <section class="content_contact">
+    <form class="form">
+      <input type="text" name="firstname" placeholder="Nombre:">
+      <br>
+      <input type="text" name="email" placeholder="Email:">
+      <br>
+      <input type="text" name="phone" placeholder="Teléfono:">
+	  	<p class="message_form">MENSAJE: <textarea name="name" rows="8" cols="40" placeholder="Mensaje:"></textarea> </p>
+      <input type="submit" value="ENVIAR" class="hvr-grow">
+    </form>
+
+    <div class="info_contact">
+      <p class="info_text">
+      Comercio #161 Col.Centro <br>
+      Guadalajara, Jalisco, México <br>
+      C.P. 44100 <br><br>
+
+      (33) 3613-2214 <br>
+      (33) 3100-7077 <br><br>
+
+      contacto@baudeoarquitectura.com
+      </p>
+      <a href="" class="hvr-bounce-in"><img class="social_icon" src="img/twitter.svg"/></a>
+      <a href="" class="hvr-bounce-in"><img class="social_icon" src="img/instagram.svg"/></a>
+      <a href="" class="hvr-bounce-in"><img class="social_icon" src="img/facebook.svg"/></a>
+    </div>
+  </section>
+
+  <!-- Google Maps -->
+  <section class="map">
+    	<div class="map" id="googleMap" >	</div>
+  </section>
+
+  <!-- Footer -->
+  <section class="footer">
+    <div class="footer-top">
+      <div class="footer-top-right">
+        <img class="Logo_Footer" src="img/LogoMenu.svg"/>  <br><br>
+
+        <a href=""><img class="social_icon" src="img/twitter.svg"/></a>
+        <a href=""><img class="social_icon" src="img/instagram.svg"/></a>
+        <a href=""><img class="social_icon" src="img/facebook.svg"/></a>
+        <br><br>
+
+        <span>Dirección 1971 int. 6</span> <br>
+        <span>Fracc. Andares</span> <br>
+        <span>Guadalajara, Jal, México</span> <br>
+        <span>33333 333 333</span> <br>
+        <span>arquitecto@contacto.com</span> <br>
+      </div>
+
+      <div class="footer-top-left">
+          <ul>
+            <li class="menu-title">MENU</li>
+            <a href="index.html"><li>HOME</li></a>
+            <a href="filosofia.html"><li>FILOSOFÍA</li></a>
+            <a href="servicios.html"><li>SERVICIOS</li></a>
+            <a href="portafolio.html"><li>PORTAFOLIO</li></a>
+            <a href="contacto.html"><li>CONTACTO</li></a>
+          </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <span class="footer-text">©1996-2015 Baudeo Arquitectos</span>
+    </div>
+
+  </section>
+
+</body>
+</html>
