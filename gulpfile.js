@@ -43,14 +43,6 @@ gulp.task('watch', function() {
   gulp.watch(config.html.watch, ['build']);
 });
 
-gulp.task('prefix', function () {
-	return gulp.src('build/css/main.css')
-		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
-			cascade: false
-		}))
-		.pipe(gulp.dest('build/css/'));
-});
 
 gulp.task('compress', function (cb) {
   pump([
@@ -62,8 +54,15 @@ gulp.task('compress', function (cb) {
   );
 });
 
-
+gulp.task('prefix', function () {
+	return gulp.src('build/css/main.css')
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
+		.pipe(gulp.dest('build/css/'));
+});
 
 gulp.task('build', ['build:css'])
 
-gulp.task('default', ['server', 'watch', 'build', 'prefix']);
+gulp.task('default', ['server', 'watch', 'build', 'prefix', 'compress']);
