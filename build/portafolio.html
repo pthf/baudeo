@@ -35,15 +35,16 @@
   <header class="bar">
     <a href="index.html" class="Bar_Menu hvr-float"><img class="Logo_Menu" src="img/LogoMenu.svg"/></a>
       <ul class="bar-list">
-        <a href="filosofia.html" class="hvr-hang"><li class="bar-list-item">FILOSOFÍA</li></a>
-        <a href="servicios.html" class="hvr-hang"><li class="bar-list-item">SERVICIOS</li></a>
-        <a href="portafolio.html" class="hvr-hang"><li class="bar-list-item selected-item">PORTAFOLIO</li></a>
-        <a href="contacto.html" class="hvr-hang"><li class="bar-list-item">CONTACTO</li></a>
+        <a href="filosofia.html"><li class="bar-list-item">FILOSOFÍA</li></a>
+        <a href="servicios.html"><li class="bar-list-item">SERVICIOS</li></a>
+        <a href="portafolio.html"><li class="bar-list-item selected-item">PORTAFOLIO</li></a>
+        <a href="contacto.html" ><li class="bar-list-item">CONTACTO</li></a>
       </ul>
   </header>
 
   <span class="nav-icon">&#9776;</span>
     <ul class="mobile-nav animated">
+      <a href="filosofia.html"><li>INICIO</li></a>
       <a href="filosofia.html"><li class="">FILOSOFÍA</li></a>
       <a href="servicios.html"><li class="">SERVICIOS</li></a>
       <a href="portafolio.html"><li class="selected-item-mobile">PORTAFOLIO</li></a>
@@ -126,22 +127,22 @@
           </div>
         </li>
 
-        <li class="item-port  hvr-grow first-row" name="comercial"  >
+        <li class="item-port  hvr-grow first-row" name="comercial interiorismo design"  >
           <div class="item-port-content first-row-item">
             <img class="item-port-img" src="img/img3.png"/>
               <div class="desc-item">
-                <div class="desc-title">Casa Liffuyotu - Guadalajara Jalisco</div>
+                <div class="desc-title">Casa Liffuyotu - Guadalajara Jalisco TEST 2</div>
                 <div class="desc-subtitle">Fue un pequeño proyecto de arquitectura destinado a una casa para la familia Liffuyotu...</div>
               </div>
             <div class="more-icon"> <img src="img/close_image-01.png"/> </div>
           </div>
         </li>
 
-        <li class="item-port  hvr-grow second-row" name="design" >
+        <li class="item-port  hvr-grow second-row" name="design comercial habitacional" >
           <div class="item-port-content second-row-item">
             <img class="item-port-img" src="img/img4.png"/>
               <div class="desc-item">
-                <div class="desc-title">Casa Liffuyotu - Guadalajara Jalisco</div>
+                <div class="desc-title">Casa Liffuyotu - Guadalajara Jalisco TEST 1</div>
                 <div class="desc-subtitle">Fue un pequeño proyecto de arquitectura destinado a una casa para la familia Liffuyotu...</div>
               </div>
             <div class="more-icon"> <img src="img/close_image-01.png"/> </div>
@@ -170,11 +171,11 @@
           </div>
         </li>
 
-        <li class="item-port hvr-grow third-row" name="comercial" >
+        <li class="item-port hvr-grow third-row" name="comercial habitacional interiorismo" >
           <div class="item-port-content third-row-item">
             <img class="item-port-img" src="img/img7.png"/>
               <div class="desc-item">
-                <div class="desc-title">Casa Liffuyotu - Guadalajara Jalisco</div>
+                <div class="desc-title">Casa Liffuyotu - Guadalajara Jalisco TEST 3</div>
                 <div class="desc-subtitle">Fue un pequeño proyecto de arquitectura destinado a una casa para la familia Liffuyotu...</div>
               </div>
             <div class="more-icon"> <img src="img/close_image-01.png"/> </div>
@@ -688,7 +689,7 @@
 
       <div class="footer-top-left">
           <ul>
-            <li class="menu-title">MENU</li>
+
             <a href="index.html"><li>HOME</li></a>
             <a href="filosofia.html"><li>FILOSOFÍA</li></a>
             <a href="servicios.html"><li>SERVICIOS</li></a>
@@ -706,7 +707,11 @@
   </section>
 
   <script type="text/javascript">
-
+    $( ".scrollTop" ).click(function() {
+       $('html, body').animate({
+           scrollTop: $("section.menu_portafolio").offset().top
+       }, 700);
+    });
   </script>
 
 </body>

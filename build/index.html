@@ -7,19 +7,8 @@
 
   <title>Baudeo</title>
 
-  <!-- JQuery  -->
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-
   <!-- CSS -->
   <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/hover-min.css">
-  <link rel="stylesheet" href="./css/animate.css">
-
-  <!-- JavaScript -->
-  <script type="text/javascript" src="js/animate.js"></script>
-  <script type="text/javascript" src="js/hover_boxes.js"></script>
-  <script type="text/javascript" src="js/popup_port.js"></script>
-
 </head>
 <body>
 
@@ -27,39 +16,21 @@
   <header class="bar">
     <a href="index.html" class="Bar_Menu hvr-float"><img class="Logo_Menu" src="img/LogoMenu.svg"/></a>
       <ul class="bar-list">
-        <a href="filosofia.html" class="hvr-hang"><li class="bar-list-item">FILOSOFÍA</li></a>
-        <a href="servicios.html" class="hvr-hang"><li class="bar-list-item">SERVICIOS</li></a>
-        <a href="portafolio.html" class="hvr-hang"><li class="bar-list-item">PORTAFOLIO</li></a>
-        <a href="contacto.html" class="hvr-hang"><li class="bar-list-item">CONTACTO</li></a>
+        <a href="filosofia.html" ><li class="bar-list-item">FILOSOFÍA</li></a>
+        <a href="servicios.html" ><li class="bar-list-item">SERVICIOS</li></a>
+        <a href="portafolio.html" ><li class="bar-list-item">PORTAFOLIO</li></a>
+        <a href="contacto.html" ><li class="bar-list-item">CONTACTO</li></a>
       </ul>
   </header>
 
   <span class="nav-icon">&#9776;</span>
     <ul class="mobile-nav animated">
+      <a href="filosofia.html"><li class="selected">INICIO</li></a>
       <a href="filosofia.html"><li class="">FILOSOFÍA</li></a>
       <a href="servicios.html"><li class="">SERVICIOS</li></a>
       <a href="portafolio.html"><li class="">PORTAFOLIO</li></a>
       <a href="contacto.html"><li class="">CONTACTO</li></a>
     </ul>
-
-  <script type="text/javascript">
-      var icon = document.querySelector('.nav-icon');
-      var show = false;
-
-      icon.onclick = function() {
-
-      if (show) {
-        $('.mobile-nav').removeClass('slideInDown');
-        $('.mobile-nav').addClass('slideOutUp');
-      }else{
-        $('.mobile-nav').addClass('is-show');
-        $('.mobile-nav').addClass('slideInDown');
-        $('.mobile-nav').removeClass('slideOutUp');
-      }
-      show=!show;
-    }
-  </script>
-
 
   <!-- Slider y logo -->
   <section class="top">
@@ -193,7 +164,7 @@
 
       <div class="footer-top-left">
           <ul>
-            <li class="menu-title">MENU</li>
+            
             <a href="index.html"><li>HOME</li></a>
             <a href="filosofia.html"><li>FILOSOFÍA</li></a>
             <a href="servicios.html"><li>SERVICIOS</li></a>
@@ -211,32 +182,58 @@
 
   </section>
 
-  <!-- Script slider -->
-  <script type="text/javascript">
-    $("#slideshow > div:gt(0)").hide();
+  <!-- JQuery  -->
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 
-    setInterval(function() {
-    $('#slideshow > div:first')
-      .fadeOut(3000)
-      .next()
-      .fadeIn(5000)
-      .end()
-      .appendTo('#slideshow');
-    },  3000);
-  </script>
 
-  <!-- Script menu responsive -->
-  <script type="text/javascript">
+    <script type="text/javascript">
+        var icon = document.querySelector('.nav-icon');
+        var show = false;
 
-    $(document).on("click", ".hambuger-icon", function(){
-        $(".bar-mobile").css({
-          "opacity" : "1",
-          "z-index" : "8",
+        icon.onclick = function() {
+
+        if (show) {
+          $('.mobile-nav').removeClass('slideInDown');
+          $('.mobile-nav').addClass('slideOutUp');
+        }else{
+          $('.mobile-nav').addClass('is-show');
+          $('.mobile-nav').addClass('slideInDown');
+          $('.mobile-nav').removeClass('slideOutUp');
+        }
+        show=!show;
+      }
+    </script>
+
+  <!-- JavaScript -->
+  <script type="text/javascript" src="js/animate.js"></script>
+  <script type="text/javascript" src="js/hover_boxes.js"></script>
+  <script type="text/javascript" src="js/popup_port.js"></script>
+
+
+    <!-- Script slider -->
+    <script type="text/javascript">
+      $("#slideshow > div:gt(0)").hide();
+
+      setInterval(function() {
+      $('#slideshow > div:first')
+        .fadeOut(3000)
+        .next()
+        .fadeIn(5000)
+        .end()
+        .appendTo('#slideshow');
+      },  3000);
+    </script>
+
+    <!-- Script menu responsive -->
+    <script type="text/javascript">
+      $(document).on("click", ".hambuger-icon", function(){
+          $(".bar-mobile").css({
+            "opacity" : "1",
+            "z-index" : "8",
+          });
+        return false;
         });
-      return false;
-      });
-
-  </script>
+    </script>
 
 </body>
 </html>
