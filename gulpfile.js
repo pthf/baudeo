@@ -4,6 +4,9 @@ var stylus = require('gulp-stylus');
 var nib = require('nib');
 var minifyCSS = require('gulp-minify-css');
 var autoprefixer = require('gulp-autoprefixer');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
+
 
 var config = {
   styles: {
@@ -49,11 +52,17 @@ gulp.task('prefix', function () {
 		.pipe(gulp.dest('build/css/'));
 });
 
-gulp.task('min-js', function() {
-    return gulp.src('src/js/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('build/js/'))
+gulp.task('compress', function (cb) {
+  pump([
+        gulp.src('src/js/*.js'),
+        uglify(),
+        gulp.dest('build/js')
+    ],
+    cb
+  );
 });
+
+
 
 gulp.task('build', ['build:css'])
 

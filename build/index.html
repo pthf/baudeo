@@ -164,7 +164,7 @@
 
       <div class="footer-top-left">
           <ul>
-            
+
             <a href="index.html"><li>HOME</li></a>
             <a href="filosofia.html"><li>FILOSOFÍA</li></a>
             <a href="servicios.html"><li>SERVICIOS</li></a>
@@ -185,44 +185,43 @@
   <!-- JQuery  -->
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 
+  <!-- script menu responsive -->
+  <script type="text/javascript">
+      var icon = document.querySelector('.nav-icon');
+      var show = false;
 
-    <script type="text/javascript">
-        var icon = document.querySelector('.nav-icon');
-        var show = false;
+      icon.onclick = function() {
 
-        icon.onclick = function() {
-
-        if (show) {
-          $('.mobile-nav').removeClass('slideInDown');
-          $('.mobile-nav').addClass('slideOutUp');
-        }else{
-          $('.mobile-nav').addClass('is-show');
-          $('.mobile-nav').addClass('slideInDown');
-          $('.mobile-nav').removeClass('slideOutUp');
-        }
-        show=!show;
+      if (show) {
+        $('.mobile-nav').removeClass('slideInDown');
+        $('.mobile-nav').addClass('slideOutUp');
+      }else{
+        $('.mobile-nav').addClass('is-show');
+        $('.mobile-nav').addClass('slideInDown');
+        $('.mobile-nav').removeClass('slideOutUp');
       }
-    </script>
+      show=!show;
+    }
+  </script>
 
   <!-- JavaScript -->
   <script type="text/javascript" src="js/animate.js"></script>
   <script type="text/javascript" src="js/hover_boxes.js"></script>
   <script type="text/javascript" src="js/popup_port.js"></script>
 
+  <!-- Script slider -->
+  <script type="text/javascript">
+    $("#slideshow > div:gt(0)").hide();
 
-    <!-- Script slider -->
-    <script type="text/javascript">
-      $("#slideshow > div:gt(0)").hide();
-
-      setInterval(function() {
-      $('#slideshow > div:first')
-        .fadeOut(3000)
-        .next()
-        .fadeIn(5000)
-        .end()
-        .appendTo('#slideshow');
-      },  3000);
-    </script>
+    setInterval(function() {
+    $('#slideshow > div:first')
+      .fadeOut(3000)
+      .next()
+      .fadeIn(5000)
+      .end()
+      .appendTo('#slideshow');
+    },  3000);
+  </script>
 
     <!-- Script menu responsive -->
     <script type="text/javascript">
