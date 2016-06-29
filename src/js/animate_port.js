@@ -61,7 +61,7 @@ $(document).ready(function() {
 
   //portafolio.html bottom
     var position_element = $('section.filosofia-bottom').position().top;
-    var scrolled_animate = position_element-600;
+    var scrolled_animate = position_element-1500;
 
     if($(this).scrollTop()>=scrolled_animate){
 

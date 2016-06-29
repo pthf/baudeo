@@ -44,7 +44,7 @@ $(document).ready(function() {
 
   //filosofia.html bottom
     var position_element = $('section.filosofia-bottom').position().top;
-    var scrolled_animate = position_element-450;
+    var scrolled_animate = position_element-900;
 
     if($(this).scrollTop()>=scrolled_animate){
 

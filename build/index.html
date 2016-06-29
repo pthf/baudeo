@@ -25,7 +25,7 @@
 
   <span class="nav-icon">&#9776;</span>
     <ul class="mobile-nav animated">
-      <a href="filosofia.html"><li class="selected">INICIO</li></a>
+      <a href="index.html"><li class="selected">INICIO</li></a>
       <a href="filosofia.html"><li class="">FILOSOFÍA</li></a>
       <a href="servicios.html"><li class="">SERVICIOS</li></a>
       <a href="portafolio.html"><li class="">PORTAFOLIO</li></a>
@@ -115,33 +115,75 @@
 
   </ul>
 
-  <!-- Popup window -->
+  <!-- PopUp Window  -->
   <div class="background-filter"></div>
-  <div class="popup_window">
-    <div class="info-left">
-      <span class="title-info"> INTERIORISMO</span>
+  <div class="popup-window">
+    <div class="popup-window-wrapper">
+        <div class="info-left">
+          <div class="info-wrapper">
+
+            <div class="info-project">
+              <span class="title-info"> CASA LIFFUYOTU </span>
+              <span class="subtitle-info">GUADALAJARA JALISCO</span>
+            </div>
+
+            <div class="info-description">
+              <p class="info-description-text">
+                We create inspiring, sustainable environments that improve the human experience. <br><br>
+                Our designs are guided by a conviction that creating quality environments that
+                integrate people with nature has a positive effect on the quality of our lives. <br><br>
+                The firm works at a variety of scales, from a modest house to city master plans.
+                Our practice has extensive experience in multiple building types including housing,
+                workplace, educational, government, health, retail, mixed use, planning, interior,
+                institutional and high-tech facilities. Since the firm’s inception in 1995,
+                Rob Paulus Architects has received more than 60 local, regional and national
+                awards and has been widely published nationally and internationally.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="info-right">
+          <div class="touch-slider">
+
+            <span style="touch-action: manipulation" class="arrow-left" href="#"> < </span>
+            <span style="touch-action: manipulation" class="arrow-right" href="#"> > </span>
+
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
 
 
-      <p class="text-info">
-        <i>Proyectos únicos que permanecen en el tiempo.</i> <br> <br>
-        En BAUDEO creemos que antes de iniciar una construcción es
-        importante contar con un proyecto arquitectónico profesional, con el
-        perfecto balance entre diseño, aprovechamiento de espacios y
-        recursos. <br><br>
-        Nuestro objetivo es lograr proyectos funcionales, estéticos y
-        principalmente, propositivos. <br><br>
-        La atención a los detalles es esencial en cada diseño.
-        Por ello nos dedicamos a trabajar cuidadosamente contigo para que tu
-        proyecto refleje tu estilo de vida; siendo fieles a nuestra filosofía,
-        “diseñar y construir de forma única”.
-      </p>
+                <div class="swiper-slide">
+                  <img src="img/img1.png">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="img/img2.png">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="img/img3.png">
+                </div>
+              </div>
+            </div>
+
+            <div class="pagination"></div>
+
+          </div>
+        </div>
+
+
+        <div class="controls-portfolio">
+          <div class="controls-portfolio-wrapper">
+            <span class="prev-port"> < Proyecto Anterior</span>
+            <span class="next-port">Proyecto Siguiente > </span>
+          </div>
+      </div>
+
+
+      <span class="close-info"><img src="img/close_image-01.png"/></span>
     </div>
-
-    <div class="info-right">
-      <div class="img-info"><img src="img/img11.png"/></div>
-      <a class="close-info"><img src="img/close_image-01.png"/></a>
-    </div>
-
   </div>
 
   <!-- Footer -->
@@ -232,6 +274,26 @@
           });
         return false;
         });
+    </script>
+
+    <script type="text/javascript" src="js/slider.js"></script>
+
+    <!-- Slider settings -->
+    <script type="text/javascript">
+      var mySwiper = new Swiper('.swiper-container',{
+        pagination: '.pagination',
+        loop:true,
+        grabCursor: false,
+        paginationClickable: true,
+        autoplay:false,
+        speed:500
+      })
+      $('.arrow-left').on('click', function(e){
+        mySwiper.swipePrev()
+      })
+      $('.arrow-right').on('click', function(e){
+        mySwiper.swipeNext()
+      })
     </script>
 
 </body>

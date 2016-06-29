@@ -6,22 +6,27 @@
   top 0
   position fixed
   background rgba(51,51,51,0.3)
-  z-index 7
+  z-index -10
+  opacity 0
 
 .popup-window
-  position absolute
+  position fixed
   width 100%
-  height auto
-  z-index 9
-  opacity 1
+  height 100%
+  overflow-y auto
+  z-index -10
+  opacity 0
   top 0
   background-color rgba(0, 0, 0, 0.6)
+  transition 1s
 
 .popup-window-wrapper
   position absolute
   width 100%
   height auto
+  top 15px
   display flex
+  display -webkit-box
   flex-wrap wrap
   flex-direction row
   justify-content space-between
@@ -132,6 +137,7 @@ span.close-info
     flex-direction column
     width 90%
     margin-left 5%
+    top 0
 
   .info-left, .info-right
     width 80%
@@ -147,3 +153,17 @@ span.close-info
 
   .controls-portfolio-wrapper
     width 80%
+
+@media (max-width 640px)
+  .controls-portfolio-wrapper
+    width 90%
+
+  .next-port, .prev-port
+    font-size 12px
+
+@media (max-width 480px)
+  .controls-portfolio-wrapper
+    width 90%
+
+  .next-port, .prev-port
+    font-size 10px

@@ -3,9 +3,9 @@ var webserver = require('gulp-webserver');
 var stylus = require('gulp-stylus');
 var nib = require('nib');
 var minifyCSS = require('gulp-minify-css');
-var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
 var pump = require('pump');
+var autoprefixer = require('gulp-autoprefixer');
 
 
 var config = {
@@ -55,14 +55,15 @@ gulp.task('compress', function (cb) {
 });
 
 gulp.task('prefix', function () {
-	return gulp.src('build/css/main.css')
+	return gulp.src('src/styles/main.css')
 		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
+			browsers: ['last 2 versions','iOS 7'],
 			cascade: false
 		}))
-		.pipe(gulp.dest('build/css/'));
+		.pipe(gulp.dest('build/css'));
 });
+
 
 gulp.task('build', ['build:css'])
 
-gulp.task('default', ['server', 'watch', 'build', 'prefix', 'compress']);
+gulp.task('default', ['server', 'watch', 'build','compress', 'prefix']);

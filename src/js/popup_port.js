@@ -11,6 +11,9 @@ $(document).on("ready",function(){
       $(".background-filter").css({
         "opacity" : ".8",
         "z-index" : "8"
+      }),
+      $('html').css({
+        "overflow-y" : "hidden"
       });
     // "return false;" hace que al dar scroll la venta mostrada siga al scroll.
     return false;
@@ -27,6 +30,9 @@ $(document).on("ready",function(){
         "opacity" : "0",
         "z-index" : "-10",
         "transition" : "1s"
+      }),
+      $('html').css({
+        "overflow-y" : "scroll"
       });
     });
 });
