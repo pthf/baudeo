@@ -69,7 +69,7 @@
       <ul id="Grid">
         <!-- item en portafolio -->
         <!-- primera fila del portafolio -->
-        <li class="item-port  hvr-grow first-row" name="habitacional"  >
+        <li class="item-port  hvr-grow first-row" name="habitacional" id="1"  >
           <div class="item-port-content first-row-item">
             <img class="item-port-img" src="img/img1.png"/>
               <div class="desc-item">
@@ -773,22 +773,68 @@
       mySwiper.swipeNext()
     })
   </script>
+
+  <!-- Ancho de slider -->
   <script type="text/javascript">
-
-    var popHeight = $(".info-left").width();
-    $('.touch-slider').css("width", popHeight);
-
-    $( ".services-elem,.ver-mas" ).click(function() {
+    var windowWidth = $(window).width();
+    if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+      $('.info-left, .info-right').addClass('desktop-slider')
       var popHeight = $(".info-left").width();
       $('.touch-slider').css("width", popHeight);
-    });
 
-    $( window ).resize(function() {
-      var popHeight = $(".info-left").width();
-      $('.touch-slider').css("width", popHeight);
-    });
 
+      $( ".services-elem,.ver-mas" ).click(function() {
+      $('.info-left, .info-right').addClass('desktop-slider')
+        var popHeight = $(".info-left").width();
+        $('.touch-slider').css("width", popHeight);
+      });
+
+      $( window ).click(function() {
+      $('.info-left, .info-right').addClass('desktop-slider')
+        var popHeight = $(".info-left").width();
+        $('.touch-slider').css("width", popHeight);
+      });
+
+      $( window ).resize(function() {
+      $('.info-left, .info-right').addClass('desktop-slider')
+        var popHeight = $(".info-left").width();
+        $('.touch-slider').css("width", popHeight);
+      });
+
+      ( window ).resize(function() {
+      $('.info-left, .info-right').addClass('desktop-slider')
+        var popHeight = $(".info-left").width();
+        $('.touch-slider').css("width", popHeight);
+
+        $( ".services-elem,.ver-mas" ).click(function() {
+          $('.info-left, .info-right').addClass('desktop-slider')
+          var popHeight = $(".info-left").width();
+          $('.touch-slider').css("width", popHeight);
+        });
+
+        $( window ).resize(function() {
+          $('.info-left, .info-right').addClass('desktop-slider')
+          var popHeight = $(".info-left").width();
+          $('.touch-slider').css("width", popHeight);
+        });
+      });
+
+      if (windowWidth < 999) {
+      $('.info-left, .info-right').removeClass('desktop-slider-slider')
+      $('.info-left, .info-right').addClass('mobile-slider')
+        var popHeight = $(".info-left").width();
+        $('.touch-slider').css("width", popHeight);
+      }
+      else {
+        $('.info-left, .info-right').removeClass('mobile-slider')
+        $('.info-left, .info-right').addClass('desktop-slider')
+          var popHeight = $(".info-left").width();
+          $('.touch-slider').css("width", popHeight);
+      }
+
+    }
   </script>
+
 
 </body>
 </html>

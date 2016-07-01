@@ -35,7 +35,7 @@ $(document).ready(function() {
      }
   //index.html grid
     var position_element = $('#Grid').position().top;
-    var scrolled_animate = position_element-350;
+    var scrolled_animate = position_element-600;
 
     if($(this).scrollTop()>=scrolled_animate){
       $("a.test-opacity").css({

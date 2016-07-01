@@ -22,7 +22,7 @@ $(document).ready(function() {
 
   //servicios.html grid
     var position_element = $('#Grid').position().top;
-    var scrolled_animate = position_element-450;
+    var scrolled_animate = position_element-750;
 
     if($(this).scrollTop()>=scrolled_animate){
       $("a.test-opacity").css({
@@ -34,7 +34,6 @@ $(document).ready(function() {
 
       $(".first-item").addClass('animated');
       $(".first-item").addClass('fadeInLeft');
-      $(".first-item").addClass('hvr-grow');
 
       $(".second-item").addClass('animated');
       $(".second-item").addClass('fadeInUp');
@@ -46,7 +45,7 @@ $(document).ready(function() {
 
   //servicios.html bottom
     var position_element = $('section.filosofia-bottom').position().top;
-    var scrolled_animate = position_element-450;
+    var scrolled_animate = position_element-800;
 
     if($(this).scrollTop()>=scrolled_animate){
 

@@ -1,1 +1,0 @@
-function initialize(){var e={center:myCenter,zoom:15,scrollwheel:!1,mapTypeId:google.maps.MapTypeId.ROADMAP},o=new google.maps.Map(document.getElementById("googleMap"),e),a=new google.maps.Marker({position:myCenter});a.setMap(o)}var myCenter=new google.maps.LatLng(21.171822,(-101.7333769));google.maps.event.addDomListener(window,"load",initialize);
