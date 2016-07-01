@@ -6,6 +6,7 @@ var minifyCSS = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 var pump = require('pump');
 var autoprefixer = require('gulp-autoprefixer');
+var imagemin = require('gulp-tinypng');
 
 
 var config = {
@@ -61,6 +62,12 @@ gulp.task('prefix', function () {
 			cascade: false
 		}))
 		.pipe(gulp.dest('build/css'));
+});
+
+gulp.task('tinypng', function () {
+	gulp.src('src/img/*.png')
+		.pipe(imagemin('dkXP52yPofvF2hGtUEgQmZQuZ0BwJpv4'))
+		.pipe(gulp.dest('build/img'));
 });
 
 

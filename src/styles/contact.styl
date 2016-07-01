@@ -16,7 +16,7 @@
 form
   width 25%
 
-input[type="text"]
+input[type="text"],input[type="tel"]
   display block
   margin 0
   width 100%
@@ -26,7 +26,7 @@ input[type="text"]
   box-shadow none
   border-radius none
 
-input[type="text"]:focus
+input[type="text"]:focus,input[type="tel"]:focus
   outline: none
   box-shadow: inset 1px 1px 2px 0 #c9c9c9
 
@@ -40,7 +40,7 @@ input[type="text"]:nth-child(4)
   box-shadow none
   border-radius none
 
-input[type="text"]:focus
+input[type="text"]:focus,input[type="tel"]:focus
   outline none
   box-shadow inset 1px 1px 2px 0 #c9c9c9
 
@@ -78,6 +78,7 @@ input[type="submit"]
   appearance none
   box-shadow none
   border-radius none
+  cursor pointer
 
 input[type="submit"]:hover
   outline: none
@@ -96,6 +97,8 @@ p.info_text
   width 100%
   height 30vw
 
+.phoneNumber
+  cursor pointer
 
  /* media queries */
 

@@ -27,7 +27,7 @@
     opacity 0
 
   .fil-title
-    margin-left -32vw
+    margin-left -31vw
 
   .middle-mid
     width 70%
@@ -35,7 +35,7 @@
     display flex
     flex-wrap nowrap
     justify-content space-between
-    align-items flex-start
+    align-items center
     border-bottom 2px solid white
     margin-bottom 5vw
     margin-left 11vw
@@ -45,16 +45,27 @@
   img.logo-mid
     opacity 0
 
+  img.logo-mid.logo-index
+    width 28%
+
+  p.middle-text
+    width 60%
+
+
+
+
 /* responsive media queries */
 
-@media (min-width 1920px)
-  p
-    width 40%
-    font-size 18px
+  @media (min-width 1920px)
+    p
+      width 40%
+      font-size 18px
 
-  img.logo-mid
-    width 35%
+    img.logo-mid
+      width 35%
 
+    .middle-text
+      width 60%
   @media (max-width 1920px)
     p
       width 40%
@@ -63,6 +74,8 @@
     img.logo-mid
       width 35%
 
+    middle-text
+      width 60%
   @media (max-width 1280px)
     p
       width 45%
@@ -116,6 +129,9 @@
 
     .item-info
       font-size 24px !important
+
+    .middle p.middle-text
+      width 90%
 
   @media (max-width 480px)
     h1

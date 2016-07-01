@@ -3,18 +3,9 @@
 <head>
   <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Baudeo</title>
-
-  <!-- JQuery -->
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-
   <!-- CSS -->
   <link rel="stylesheet" href="./css/main.css">
-
-  <!-- JavaScript -->
-  <script type="text/javascript" src="js/animate_cont.js"></script>
-
 </head>
 <body>
 
@@ -38,25 +29,6 @@
       <a href="contacto.html"><li class="selected">CONTACTO</li></a>
     </ul>
 
-  <script type="text/javascript">
-      // Animaciones en el menu de moviles
-      var icon = document.querySelector('.nav-icon');
-      var show = false;
-
-      icon.onclick = function() {
-
-      if (show) {
-        $('.mobile-nav').removeClass('slideInDown');
-        $('.mobile-nav').addClass('slideOutUp');
-      }else{
-        $('.mobile-nav').addClass('is-show');
-        $('.mobile-nav').addClass('slideInDown');
-        $('.mobile-nav').removeClass('slideOutUp');
-      }
-      show=!show;
-    }
-  </script>
-
   <!-- Logo  -->
   <section class="top">
 
@@ -76,11 +48,11 @@
   <!-- Formulario de contacto -->
   <section class="content_contact">
     <form class="form">
-      <input type="text" name="firstname" placeholder="Nombre:">
+      <input type="text" name="firstname" placeholder="Nombre:" required="">
       <br>
-      <input type="text" name="email" placeholder="Email:">
+      <input type="text" name="email" placeholder="Email:" required="">
       <br>
-      <input type="text" name="phone" placeholder="Teléfono:">
+      <input type="tel" name="phone" pattern="[0-9]*" inputmode="numeric" placeholder="Teléfono:" onkeypress="validate(event)" required="">
 	  	<p class="message_form">MENSAJE: <textarea name="name" rows="8" cols="40" placeholder="Mensaje:"></textarea> </p>
       <input type="submit" value="ENVIAR" class="hvr-grow">
     </form>
@@ -102,9 +74,6 @@
     </div>
   </section>
 
-  <!-- Google Maps -->
-  <script src="http://maps.googleapis.com/maps/api/js"></script>
-	<script type="text/javascript" src="/js/google_api.js"></script>
   <section class="map">
     	<div class="map" id="googleMap" >	</div>
   </section>
@@ -123,7 +92,7 @@
         <span>Dirección 1971 int. 6</span> <br>
         <span>Fracc. Andares</span> <br>
         <span>Guadalajara, Jal, México</span> <br>
-        <span>33333 333 333</span> <br>
+        <span class="phoneNumber"><a tel="33333 333 333">33333 333 333</a></span> <br>
         <span>arquitecto@contacto.com</span> <br>
       </div>
 
@@ -144,7 +113,48 @@
         <span class="footer-text">©1996-2015 Baudeo Arquitectos</span>
     </div>
 
+
   </section>
+
+  <!-- JQuery -->
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!-- Animaciones en el menu de moviles -->
+  <script type="text/javascript">
+
+      var icon = document.querySelector('.nav-icon');
+      var show = false;
+
+      icon.onclick = function() {
+
+      if (show) {
+        $('.mobile-nav').removeClass('slideInDown');
+        $('.mobile-nav').addClass('slideOutUp');
+      }else{
+        $('.mobile-nav').addClass('is-show');
+        $('.mobile-nav').addClass('slideInDown');
+        $('.mobile-nav').removeClass('slideOutUp');
+      }
+      show=!show;
+    }
+  </script>
+  <!-- Animaciones -->
+  <script type="text/javascript" src="js/animate_cont.js"></script>
+  <!-- Google Maps -->
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script type="text/javascript" src="/js/google_api.js"></script>
+  <!-- Validar solo numeros en el formulario telefono -->
+  <script type="text/javascript">
+    function validate(evt) {
+      var theEvent = evt || window.event;
+      var key = theEvent.keyCode || theEvent.which;
+      key = String.fromCharCode( key );
+      var regex = /[0-9]|\./;
+      if( !regex.test(key) ) {
+        theEvent.returnValue = false;
+        if(theEvent.preventDefault) theEvent.preventDefault();
+      }
+    }
+  </script>
 
 </body>
 </html>

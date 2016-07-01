@@ -3,26 +3,12 @@
 <head>
   <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Baudeo</title>
-
-  <!-- JQuery -->
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-
   <!-- CSS -->
   <link rel="stylesheet" href="./css/main.css">
 
 </head>
 <body>
-  <script type="text/javascript">
-    $(document).on("click", ".opt-list", function(){
-      $(".opt-list").removeClass("selected");
-      $(".opt-list").addClass("selected");
-    });
-  </script>
-
-
   <!-- Desktop Menu -->
   <header class="bar">
     <a href="index.html" class="Bar_Menu hvr-float"><img class="Logo_Menu" src="img/LogoMenu.svg"/></a>
@@ -42,25 +28,6 @@
       <a href="portafolio.html"><li class="selected">PORTAFOLIO</li></a>
       <a href="contacto.html"><li class="">CONTACTO</li></a>
     </ul>
-
-  <script type="text/javascript">
-      // Animaciones en el menu de moviles
-      var icon = document.querySelector('.nav-icon');
-      var show = false;
-
-      icon.onclick = function() {
-
-      if (show) {
-        $('.mobile-nav').removeClass('slideInDown');
-        $('.mobile-nav').addClass('slideOutUp');
-      }else{
-        $('.mobile-nav').addClass('is-show');
-        $('.mobile-nav').addClass('slideInDown');
-        $('.mobile-nav').removeClass('slideOutUp');
-      }
-      show=!show;
-    }
-  </script>
 
   <!-- Logo  -->
   <section class="top">
@@ -690,7 +657,6 @@
           </div>
         </div>
 
-
         <div class="controls-portfolio">
           <div class="controls-portfolio-wrapper">
             <span class="prev-port"> < Proyecto Anterior</span>
@@ -727,7 +693,7 @@
         <span>Dirección 1971 int. 6</span> <br>
         <span>Fracc. Andares</span> <br>
         <span>Guadalajara, Jal, México</span> <br>
-        <span>33333 333 333</span> <br>
+        <span class="phoneNumber"><a tel="33333 333 333">33333 333 333</a></span> <br>
         <span>arquitecto@contacto.com</span> <br>
       </div>
 
@@ -750,6 +716,15 @@
 
   </section>
 
+  <!-- JQuery -->
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript">
+    $(document).on("click", ".opt-list", function(){
+      $(".opt-list").removeClass("selected");
+      $(".opt-list").addClass("selected");
+    });
+  </script>
   <script type="text/javascript">
     $( ".scrollTop" ).click(function() {
        $('html, body').animate({
@@ -757,8 +732,24 @@
        }, 700);
     });
   </script>
+  <script type="text/javascript">
+      // Animaciones en el menu de moviles
+      var icon = document.querySelector('.nav-icon');
+      var show = false;
 
-  <!-- JavaScript -->
+      icon.onclick = function() {
+
+      if (show) {
+        $('.mobile-nav').removeClass('slideInDown');
+        $('.mobile-nav').addClass('slideOutUp');
+      }else{
+        $('.mobile-nav').addClass('is-show');
+        $('.mobile-nav').addClass('slideInDown');
+        $('.mobile-nav').removeClass('slideOutUp');
+      }
+      show=!show;
+    }
+  </script>
   <script type="text/javascript" src="js/animate_port.js"></script>
   <script type="text/javascript" src="js/popup_port.js"></script>
   <script type="text/javascript" src="js/hover_boxes.js"></script>
@@ -781,6 +772,22 @@
     $('.arrow-right').on('click', function(e){
       mySwiper.swipeNext()
     })
+  </script>
+  <script type="text/javascript">
+
+    var popHeight = $(".info-left").width();
+    $('.touch-slider').css("width", popHeight);
+
+    $( ".services-elem,.ver-mas" ).click(function() {
+      var popHeight = $(".info-left").width();
+      $('.touch-slider').css("width", popHeight);
+    });
+
+    $( window ).resize(function() {
+      var popHeight = $(".info-left").width();
+      $('.touch-slider').css("width", popHeight);
+    });
+
   </script>
 
 </body>

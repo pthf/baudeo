@@ -15,7 +15,7 @@ $(document).ready(function() {
       });
 
       $(".menu_portafolio").addClass('animated');
-      $(".menu_portafolio").addClass('fadeInDown');
+      $(".menu_portafolio").addClass('fadeIn');
     }
 
 

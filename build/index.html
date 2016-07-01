@@ -4,9 +4,7 @@
   <!-- Baudeo -->
   <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Baudeo</title>
-
   <!-- CSS -->
   <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -200,13 +198,12 @@
         <span>Dirección 1971 int. 6</span> <br>
         <span>Fracc. Andares</span> <br>
         <span>Guadalajara, Jal, México</span> <br>
-        <span>33333 333 333</span> <br>
+        <span class="phoneNumber"><a tel="33333 333 333">33333 333 333</a></span> <br>
         <span>arquitecto@contacto.com</span> <br>
       </div>
 
       <div class="footer-top-left">
-          <ul>
-
+          <ul class="footer-top-left-info">
             <a href="index.html"><li>HOME</li></a>
             <a href="filosofia.html"><li>FILOSOFÍA</li></a>
             <a href="servicios.html"><li>SERVICIOS</li></a>
@@ -217,7 +214,6 @@
 
     </div>
 
-
     <div class="footer-bottom">
         <span class="footer-text">©1996-2015 Baudeo Arquitectos</span>
     </div>
@@ -226,7 +222,6 @@
 
   <!-- JQuery  -->
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-
   <!-- script menu responsive -->
   <script type="text/javascript">
       var icon = document.querySelector('.nav-icon');
@@ -245,12 +240,6 @@
       show=!show;
     }
   </script>
-
-  <!-- JavaScript -->
-  <script type="text/javascript" src="js/animate.js"></script>
-  <script type="text/javascript" src="js/hover_boxes.js"></script>
-  <script type="text/javascript" src="js/popup_port.js"></script>
-
   <!-- Script slider -->
   <script type="text/javascript">
     $("#slideshow > div:gt(0)").hide();
@@ -264,37 +253,27 @@
       .appendTo('#slideshow');
     },  3000);
   </script>
-
-    <!-- Script menu responsive -->
-    <script type="text/javascript">
-      $(document).on("click", ".hambuger-icon", function(){
-          $(".bar-mobile").css({
-            "opacity" : "1",
-            "z-index" : "8",
-          });
-        return false;
-        });
-    </script>
-
-    <script type="text/javascript" src="js/slider.js"></script>
-
-    <!-- Slider settings -->
-    <script type="text/javascript">
-      var mySwiper = new Swiper('.swiper-container',{
-        pagination: '.pagination',
-        loop:true,
-        grabCursor: false,
-        paginationClickable: true,
-        autoplay:false,
-        speed:500
-      })
-      $('.arrow-left').on('click', function(e){
-        mySwiper.swipePrev()
-      })
-      $('.arrow-right').on('click', function(e){
-        mySwiper.swipeNext()
-      })
-    </script>
-
+  <!-- JavaScript -->
+  <script type="text/javascript" src="js/animate.js"></script>
+  <script type="text/javascript" src="js/hover_boxes.js"></script>
+  <script type="text/javascript" src="js/popup_port.js"></script>
+  <script type="text/javascript" src="js/slider.js"></script>
+  <!-- Slider settings -->
+  <script type="text/javascript">
+    var mySwiper = new Swiper('.swiper-container',{
+      pagination: '.pagination',
+      loop:true,
+      grabCursor: false,
+      paginationClickable: true,
+      autoplay:false,
+      speed:500
+    })
+    $('.arrow-left').on('click', function(e){
+      mySwiper.swipePrev()
+    })
+    $('.arrow-right').on('click', function(e){
+      mySwiper.swipeNext()
+    })
+  </script>
 </body>
 </html>
