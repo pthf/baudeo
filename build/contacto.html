@@ -47,7 +47,7 @@
 
   <!-- Formulario de contacto -->
   <section class="content_contact">
-    <form class="form">
+    <form class="form animated">
       <input type="text" name="firstname" placeholder="Nombre:" required="">
       <br>
       <input type="text" name="email" placeholder="Email:" required="">
@@ -57,7 +57,7 @@
       <input type="submit" value="ENVIAR" class="hvr-grow">
     </form>
 
-    <div class="info_contact">
+    <div class="info_contact animated">
       <p class="info_text">
       Comercio #161 Col.Centro <br>
       Guadalajara, Jalisco, México <br>
@@ -153,6 +153,16 @@
         theEvent.returnValue = false;
         if(theEvent.preventDefault) theEvent.preventDefault();
       }
+    }
+  </script>
+
+  <script type="text/javascript">
+    var touch = ( 'ontouchstart' in document.documentElement || navigator.msMaxTouchPoints > 0 ) ? true : false;
+    if( touch ) {
+      $('.desc-item,span.button-item').css('opacity','1');
+      $('.item-info,.middle,.middle-text,.middle-top-title,.item-port,.logo-mid.bottom-top,.middle img.logo-mid,.servicios,.servicios-top,.filosofia-bottom,.form,.info_contact, .content_contact').css('opacity','1');
+      $('.middle-text,.middle-top-title,.item-port,.logo-mid,.bottom-top,.middle img.logo-mid,.servicios,.servicios-top,.filosofia-bottom,.form,.info_contact').removeClass('animated');
+      $('#Grid').css('text-align','center');
     }
   </script>
 

@@ -77,7 +77,7 @@
 
   <!-- Texto de servicios  -->
   <section class="servicios">
-      <p class="servicios-top">
+      <p class="servicios-top animated">
         <i>Proyectos únicos que permanecen en el tiempo.</i> <br> <br>
         En BAUDEO creemos que antes de iniciar una construcción es
         importante contar con un proyecto arquitectónico profesional, con el
@@ -94,29 +94,38 @@
 
   <!-- Display de items -->
   <ul id="Grid">
-    <li class="item-port first-item test-opacity">
+
+    <li class="item-port first-item test-opacity animated">
       <div class="item-port-content">
-        <img class="item-port-img hvr-grow" src="img/img3.png"/>
+        <img class="item-port-img hvr-grow" src="img/img8.png"/>
           <div class="item-info">
             <span>Diseño arquitectónico</span>
+            <br><br>
+            <span class="button-item">Ver más</span>
           </div>
       </div>
     </li>
 
-    <li class="item-port second-item test-opacity">
+
+
+    <li class="item-port second-item test-opacity animated">
       <div class="item-port-content">
         <img class="item-port-img hvr-grow" src="img/img2.png"/>
         <div class="item-info">
           <span>Construcción</span>
+          <br><br>
+          <span class="button-item">Ver más</span>
         </div>
       </div>
     </li>
 
-    <li class="item-port third-item test-opacity">
+    <li class="item-port third-item test-opacity animated">
       <div class="item-port-content">
         <img class="item-port-img hvr-grow" src="img/img3.png"/>
         <div class="item-info">
           <span>Plan Residencial Total</span>
+          <br><br>
+          <span class="button-item">Ver más</span>
         </div>
       </div>
     </li>
@@ -195,7 +204,7 @@
   </div>
 
   <!-- Enlace a Contacto.html -->
-  <section class="filosofia-bottom">
+  <section class="filosofia-bottom animated">
     <span class=filosofia-title>TRABAJEMOS JUNTOS</span>
     <p class="filosofia-subtitle">
       Our designs are guided by a conviction that creating quality environments that integrate people with nature has a positive effect on the quality of our lives
@@ -260,6 +269,16 @@
     $('.arrow-right').on('click', function(e){
       mySwiper.swipeNext()
     })
+  </script>
+
+  <script type="text/javascript">
+    var touch = ( 'ontouchstart' in document.documentElement || navigator.msMaxTouchPoints > 0 ) ? true : false;
+    if( touch ) {
+      $('.desc-item,span.button-item').css('opacity','1');
+      $('.item-info,.middle,.middle-text,.middle-top-title,.item-port,.logo-mid.bottom-top,.middle img.logo-mid,.servicios,.servicios-top,.filosofia-bottom').css('opacity','1');
+      $('.middle-text,.middle-top-title,.item-port,.logo-mid,.bottom-top,.middle img.logo-mid,.servicios,.servicios-top,.filosofia-bottom').removeClass('animated');
+      $('#Grid').css('text-align','center');
+    }
   </script>
 
 </body>

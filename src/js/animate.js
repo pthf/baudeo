@@ -1,5 +1,4 @@
 //Efecto de animacion en la pagina index.html
-
 $(document).ready(function() {
 
   $(window).scroll(function(){
@@ -13,11 +12,8 @@ $(document).ready(function() {
         "opacity" : "1"
       });
 
-      $(".middle-top-title, .home-title").addClass('animated');
       $(".middle-top-title, .home-title").addClass('fadeIn');
-      $(".middle-text").addClass('animated');
       $(".middle-text").addClass('fadeInUp');
-      $(".logo-index").addClass('animated');
       $(".logo-index").addClass('fadeInRight');
     }
 
@@ -30,7 +26,6 @@ $(document).ready(function() {
         "opacity" : "1"
       });
 
-      $(".bottom-top").addClass('animated');
       $(".bottom-top").addClass('fadeIn');
      }
   //index.html grid
@@ -45,13 +40,10 @@ $(document).ready(function() {
         "opacity" : "1"
       });
 
-      $(".first-item").addClass('animated');
       $(".first-item").addClass('fadeInLeft');
 
-      $(".second-item").addClass('animated');
       $(".second-item").addClass('fadeInDown');
 
-      $(".third-item").addClass('animated');
       $(".third-item").addClass('fadeInRight');
      }
   });

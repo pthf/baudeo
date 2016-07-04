@@ -47,12 +47,12 @@
 
   <!-- Seccion de contenido 1 -->
   <section class="middle filosofia">
-    <div class="middle-top fil-top">
+    <div class="middle-top fil-top animated">
       <img class="Logo_Menu middle-top-title fil-title" src="img/LogoMenu.svg"/>
     </div>
 
     <div class="middle-mid filosofia-mid">
-      <p class="text-fil first-text">
+      <p class="text-fil first-text animated">
       We create inspiring, sustainable environments that improve the human experience. <br><br>
       Our designs are guided by a conviction that creating quality environments that
       integrate people with nature has a positive effect on the quality of our lives. <br><br>
@@ -63,13 +63,13 @@
       Rob Paulus Architects has received more than 60 local, regional and national
       awards and has been widely published nationally and internationally.
       </p>
-      <div class="img-fil first-img ">
+      <div class="img-fil first-img animated ">
         <img src="img/img4.png"/>
       </div>
     </div>
 
     <div class="middle-mid bottom-fil">
-      <p class="text-fil second-text">
+      <p class="text-fil second-text animated">
         We create inspiring, sustainable environments that improve the human experience. <br><br>
         Our designs are guided by a conviction that creating quality environments that
         integrate people with nature has a positive effect on the quality of our lives. <br><br>
@@ -81,14 +81,14 @@
         awards and has been widely published nationally and internationally.
       </p>
 
-      <div class="img-fil second-img">
+      <div class="img-fil second-img animated">
         <img src="img/img8.png"/>
       </div>
     </div>
   </section>
 
   <!-- Seccion de contenido 2 -->
-  <section class="filosofia-bottom">
+  <section class="filosofia-bottom animated">
     <span class="filosofia-title">CONÓCE NUESTRO TRABAJO</span>
       <p class="filosofia-subtitle">
         Our designs are guided by a conviction that creating quality environments that integrate people with nature has a positive effect on the quality of our lives
@@ -156,6 +156,13 @@
   </script>
   <!-- Animaciones -->
   <script type="text/javascript" src="js/animate_fil.js"></script>
+  <script type="text/javascript">
+    var touch = ( 'ontouchstart' in document.documentElement || navigator.msMaxTouchPoints > 0 ) ? true : false;
+    if( touch ) {
+      $('.middle-top,.text-fil,.img-fil,.filosofia-bottom,.middle,.middle-mid').css('opacity','1');
+      $('.middle-top,.text-fil,.img-fil,.filosofia-bottom,.middle,.middle-mid').removeClass('animated');
+    }
+  </script>
 
 </body>
 </html>

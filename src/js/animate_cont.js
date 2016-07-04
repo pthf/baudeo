@@ -15,10 +15,8 @@ $(document).ready(function() {
         "opacity" : "1",
       });
 
-      $(".form").addClass('animated');
       $(".form").addClass('fadeInLeft');
 
-      $(".info_contact").addClass('animated');
       $(".info_contact").addClass('fadeInRight');
     }
 

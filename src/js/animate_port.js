@@ -14,7 +14,6 @@ $(document).ready(function() {
         "opacity" : "1"
       });
 
-      $(".menu_portafolio").addClass('animated');
       $(".menu_portafolio").addClass('fadeIn');
     }
 
@@ -31,7 +30,6 @@ $(document).ready(function() {
           "opacity" : "1"
         });
 
-        $(".first-row-item").addClass('animated');
         $(".first-row-item").addClass('fadeInLeft');
     }
 
@@ -43,7 +41,6 @@ $(document).ready(function() {
           "opacity" : "1"
         });
 
-        $(".second-row-item").addClass('animated');
         $(".second-row-item").addClass('fadeInRight');
     }
 
@@ -55,7 +52,6 @@ $(document).ready(function() {
           "opacity" : "1"
         });
 
-        $(".third-row-item").addClass('animated');
         $(".third-row-item").addClass('fadeInLeft');
     }
 
@@ -65,7 +61,6 @@ $(document).ready(function() {
 
     if($(this).scrollTop()>=scrolled_animate){
 
-      $(".filosofia-bottom").addClass('animated');
       $(".filosofia-bottom").addClass('fadeInUp');
     }
 

@@ -14,7 +14,8 @@ $(document).on("ready",function(){
       }),
       $('html').css({
         "overflow-y" : "hidden"
-      });
+      }),
+      $('.item-info').css('opacity','1')
     // "return false;" hace que al dar scroll la venta mostrada siga al scroll.
     return false;
     });
@@ -33,6 +34,7 @@ $(document).on("ready",function(){
       }),
       $('html').css({
         "overflow-y" : "scroll"
-      });
+      }),
+      $('.item-info').css('opacity','1')
     });
 });

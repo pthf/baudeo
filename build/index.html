@@ -54,12 +54,12 @@
   <section class="middle">
 
     <div class="middle-top">
-      <h1 class="middle-top-title home-title">NOSOTROS</h1>
+      <h1 class="middle-top-title home-title animated">NOSOTROS</h1>
     </div>
 
     <div class="middle-mid">
 
-      <p class="middle-text">
+      <p class="middle-text animated">
         <i>Un detalle es una demostración del esfuerzo que se pone en el
         proyecto que se ejecuta.</i> <br><br>
         En BAUDEO creemos que tanto en el diseño de nuestros proyectos y
@@ -74,7 +74,7 @@
         único.
       </p>
 
-      <img class="logo-mid logo-index" src="img/LogoSlider.svg"/>
+      <img class="logo-mid logo-index animated" src="img/LogoSlider.svg"/>
 
     </div>
 
@@ -82,7 +82,7 @@
 
   <!-- Display de servicios -->
   <section class="bottom">
-    <div class="bottom-top">
+    <div class="bottom-top animated">
       <h2>SERVICIOS</h2>
     </div>
   </section>
@@ -90,29 +90,37 @@
   <!-- Cajas con descripcion de servicios -->
   <ul id="Grid">
 
-    <li class="item-port first-item test-opacity">
+    <li class="item-port first-item test-opacity animated">
       <div class="item-port-content">
         <img class="item-port-img hvr-grow" src="img/img8.png"/>
           <div class="item-info">
             <span>Diseño arquitectónico</span>
+            <br><br>
+            <span class="button-item">Ver más</span>
           </div>
       </div>
     </li>
 
-    <li class="item-port second-item test-opacity">
+
+
+    <li class="item-port second-item test-opacity animated">
       <div class="item-port-content">
         <img class="item-port-img hvr-grow" src="img/img2.png"/>
         <div class="item-info">
           <span>Construcción</span>
+          <br><br>
+          <span class="button-item">Ver más</span>
         </div>
       </div>
     </li>
 
-    <li class="item-port third-item test-opacity">
+    <li class="item-port third-item test-opacity animated">
       <div class="item-port-content">
         <img class="item-port-img hvr-grow" src="img/img3.png"/>
         <div class="item-info">
           <span>Plan Residencial Total</span>
+          <br><br>
+          <span class="button-item">Ver más</span>
         </div>
       </div>
     </li>
@@ -179,15 +187,6 @@
 
           </div>
         </div>
-
-
-        <div class="controls-portfolio">
-          <div class="controls-portfolio-wrapper">
-            <span class="prev-port"> < Proyecto Anterior</span>
-            <span class="next-port">Proyecto Siguiente > </span>
-          </div>
-      </div>
-
       <span class="close-info"><img src="img/close_image-01.png"/></span>
     </div>
   </div>
@@ -282,6 +281,16 @@
     $('.arrow-right').on('click', function(e){
       mySwiper.swipeNext()
     })
+  </script>
+
+  <script type="text/javascript">
+    var touch = ( 'ontouchstart' in document.documentElement || navigator.msMaxTouchPoints > 0 ) ? true : false;
+    if( touch ) {
+      $('.item-info,.middle,.middle-text,.middle-top-title,.item-port,.logo-mid.bottom-top,.middle img.logo-mid').css('opacity','1');
+      $('.middle-text,.middle-top-title,.item-port,.logo-mid,.bottom-top,.middle img.logo-mid').removeClass('animated');
+      $('#Grid').css('text-align','center');
+      $('span.button-item').css('opacity',"1");
+    }
   </script>
 </body>
 </html>

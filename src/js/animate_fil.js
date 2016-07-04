@@ -13,15 +13,12 @@ $(document).ready(function() {
     if($(this).scrollTop()>=scrolled_animate){
       $("section.middle").css({
         "opacity" : "1",
-      });
+      })
 
-      $(".fil-top").addClass('animated');
       $(".fil-top").addClass('fadeIn');
 
-      $(".first-text").addClass('animated');
       $(".first-text").addClass('fadeInRight');
 
-      $(".first-img").addClass('animated');
       $(".first-img").addClass('fadeInLeft');
 
     }
@@ -35,10 +32,8 @@ $(document).ready(function() {
       "opacity" : "1",
     });
 
-    $(".second-text").addClass('animated');
     $(".second-text").addClass('fadeInLeft');
 
-    $(".second-img").addClass('animated');
     $(".second-img").addClass('fadeInRight');
   }
 
@@ -48,7 +43,6 @@ $(document).ready(function() {
 
     if($(this).scrollTop()>=scrolled_animate){
 
-      $(".filosofia-bottom").addClass('animated');
       $(".filosofia-bottom").addClass('fadeInUp');
     }
 
