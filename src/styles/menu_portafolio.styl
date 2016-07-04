@@ -79,13 +79,16 @@ ul.list_port li:hover
 #Grid{
   text-align: justify;
   font-size: 16px;
-  background-color black
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 #Grid li{
-  display: inline-block;
-  width: 32%;
-  margin-bottom: 2.5%;
+  flex: 0 0 32%;
+  margin: 0 .5% 2% .5%;
 }
 
 .item-port
@@ -150,8 +153,8 @@ ul.list_port li:hover
 /* 3 COL */
 @media (max-width: 1920px)
   #Grid li
-    width: 32%;
-    margin-bottom: 2%;
+    flex: 0 0 32%;
+    margin: 0 .5% 2.5% .5%;
 
 /* 2 COL */
 // @media (max-width: 768px)
@@ -165,9 +168,13 @@ ul.list_port li:hover
 
 /* SINGLE COL */
 @media (max-width: 640px){
-  #Grid li{
-    width: 60%;
-    margin: 0 20% 5% 20%;
+  #Grid{
+    justify-content: center
+  }
+
+  #Grid li {
+      flex: 0 0 60%;
+      margin: 0 .5% 2.5%;
   }
 
   .list_port a{
