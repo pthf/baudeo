@@ -35,6 +35,6 @@ $(document).on("ready",function(){
       $('html').css({
         "overflow-y" : "scroll"
       }),
-      $('.item-info').css('opacity','1')
+      $('div.desc-item,div.item-info').css('opacity','.7')
     });
 });
