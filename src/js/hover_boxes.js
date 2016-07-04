@@ -6,8 +6,8 @@ $(document).on("ready",function(){
 
   mouseenter: function(){
   //cuando el mouse entra en el selector...
-  $('li.item-port').css({
-    'z-index' : '2',
+  $(this).css({
+    'z-index' : '5',
     }),
   $('.desc-item',this).css({
     'opacity' : '.9',
@@ -25,8 +25,8 @@ $(document).on("ready",function(){
 
   mouseleave: function () {
   //cuando el mouse sale del selector...
-  $('li.item-port').css({
-    'z-index' : '0',
+  $(this).css({
+    'z-index' : '1',
     }),
   $('.desc-item',this).css({
     'opacity':'0',
