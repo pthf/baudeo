@@ -1,0 +1,77 @@
+.footer
+  position relative
+  display flex
+  flex-wrap wrap
+  justify-content center
+  align-items center
+  align-content center
+  width 100%
+  height auto
+  z-index 1
+  background-color gray
+
+  &-top
+    display flex
+    flex-wrap nowrap
+    justify-content space-between
+    align-items flex-end
+    width 60%
+    height 80%
+    padding 3vw 0 3vw 0
+    color white
+
+.footer-top-left ul
+  text-align justify
+  list-style-type none
+  color white
+
+.footer-top-left ul li
+  margin-bottom 1vw
+  color #fff
+
+.footer-top-left ul a
+  text-decoration none
+  font-weight lighter
+
+img.Logo_Footer
+  display inline
+  height auto
+  width 50%
+
+img.social_icon
+  height 30px
+  width 30px
+  margin-right .3vw
+
+li.menu-title
+  color white
+  font-weight bold
+
+.footer-bottom
+  position relative
+  display flex
+  flex-wrap wrap
+  justify-content center
+  align-items center
+  align-content center
+  width 100%
+  height auto
+  padding 0vw 0 0vw 0
+  z-index 1
+  color #fff
+  background-color #434745
+
+  span.footer-text
+    padding .5vw 0 .5vw 0
+    font-size 16px
+
+/* RESPONSIVE MEDIA QUERIES */
+
+  @media (max-width 1024px)
+    .footer-top
+      width 85%
+
+  @media (max-width 320px)
+    .footer-top
+      width 89%
+      font-size 14px
