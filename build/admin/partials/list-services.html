@@ -1,0 +1,28 @@
+<div>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>name</th>
+        <th>title</th>
+        <th>description</th>
+        <th>status</th>
+        <th>actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="(key, serviceListData) in serviceList">
+        <th>{{serviceListData.idService}}</th>
+        <th>{{serviceListData.nameService}}</th>
+        <th>{{serviceListData.titleService}}</th>
+        <th>{{serviceListData.descriptionService}}</th>
+        <th ng-if="serviceListData.salientService==1">Destacado.</th>
+        <th ng-if="serviceListData.salientService==0">No destacado.</th>
+        <th>
+          <a href="#/service/{{serviceListData.idService}}"><span class="label label-default" style="cursor:pointer">Details</span></a>
+		  		<span class="label label-danger deleteService" data-id='{{serviceListData.idService}}' data-gallery='{{serviceListData.idGalleryRelation}}' style="cursor:pointer">Delete</span>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>
