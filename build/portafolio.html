@@ -48,11 +48,11 @@
   <!-- Menu de filtros de portafolio  -->
   <section class="menu_portafolio animated">
     <ul class="list_port">
-      <li><span class="opt-list hvr-grow opt-todos selected">TODOS</span></li>
-      <li><span class="opt-list hvr-grow opt-design ">DISEÑO</span></li>
-      <li><span class="opt-list hvr-grow opt-int">INTERIORISMO</span></li>
-      <li><span class="opt-list hvr-grow opt-hab">HABITACIONAL</span></li>
-      <li><span class="opt-list hvr-grow opt-com">COMERCIAL</span></li>
+      <li><span class="opt-list hvr-grow opt-todos selected" data-name='all'>TODOS</span></li>
+      <li><span class="opt-list hvr-grow opt-design " data-name='design'>DISEÑO</span></li>
+      <li><span class="opt-list hvr-grow opt-int" data-name='interiorismo'>INTERIORISMO</span></li>
+      <li><span class="opt-list hvr-grow opt-hab" data-name='habitacional'>HABITACIONAL</span></li>
+      <li><span class="opt-list hvr-grow opt-com" data-name='comercial'>COMERCIAL</span></li>
     </ul>
   </section>
 
@@ -69,7 +69,7 @@
       <ul id="Grid">
         <!-- item en portafolio -->
         <!-- primera fila del portafolio -->
-        <li class="item-port  hvr-grow first-row" name="habitacional" data-id="1"  >
+        <li class="item-port  hvr-grow first-row habitacional all" data-id="1"  >
           <div class="item-port-content first-row-item animated">
             <img class="item-port-img" src="img/img1.png"/>
               <div class="desc-item">
@@ -81,7 +81,7 @@
         </li>
 
 
-        <li class="item-port  hvr-grow first-row" name="interiorismo" data-id="2" >
+        <li class="item-port  hvr-grow first-row interiorismo all" data-id="2" >
           <div class="item-port-content first-row-item animated">
             <img class="item-port-img" src="img/img2.png"/>
               <div class="desc-item">
@@ -92,7 +92,7 @@
           </div>
         </li>
 
-        <li class="item-port  hvr-grow first-row" name="comercial interiorismo design" data-id="3"   >
+        <li class="item-port  hvr-grow first-row comercial interiorismo design all" data-id="3"   >
           <div class="item-port-content first-row-item animated">
             <img class="item-port-img" src="img/img3.png"/>
               <div class="desc-item">
@@ -104,7 +104,7 @@
         </li>
 
         <!-- segunda fila del portafolio -->
-        <li class="item-port  hvr-grow second-row" name="design comercial habitacional" data-id="4" >
+        <li class="item-port  hvr-grow second-row design comercial habitacional all" data-id="4" >
           <div class="item-port-content second-row-item animated">
             <img class="item-port-img" src="img/img4.png"/>
               <div class="desc-item">
@@ -115,7 +115,7 @@
           </div>
         </li>
 
-        <li class="item-port hvr-grow second-row" name="habitacional" data-id="5" >
+        <li class="item-port hvr-grow second-row habitacional all" data-id="5" >
           <div class="item-port-content second-row-item animated">
             <img class="item-port-img" src="img/img10.png"/>
               <div class="desc-item">
@@ -126,7 +126,7 @@
           </div>
         </li>
 
-        <li class="item-port hvr-grow second-row" name="interiorismo" data-id="6" >
+        <li class="item-port hvr-grow second-row interiorismo all" data-id="6" >
           <div class="item-port-content second-row-item animated">
             <img class="item-port-img" src="img/img6.png"/>
               <div class="desc-item">
@@ -138,7 +138,7 @@
         </li>
 
         <!-- tercera fila del portafolio -->
-        <li class="item-port hvr-grow third-row" name="comercial habitacional interiorismo" data-id="7" >
+        <li class="item-port hvr-grow third-row comercial habitacional interiorismo all" data-id="7" >
           <div class="item-port-content third-row-item animated">
             <img class="item-port-img" src="img/img7.png"/>
               <div class="desc-item">
@@ -149,7 +149,7 @@
           </div>
         </li>
 
-        <li class="item-port hvr-grow third-row" name="habitacional" data-id="8">
+        <li class="item-port hvr-grow third-row habitacional all" data-id="8">
           <div class="item-port-content third-row-item animated">
             <img class="item-port-img" src="img/img8.png"/>
               <div class="desc-item">
@@ -160,7 +160,7 @@
           </div>
         </li>
 
-        <li class="item-port hvr-grow third-row" name="design" data-id="9">
+        <li class="item-port hvr-grow third-row design all" data-id="9">
           <div class="item-port-content third-row-item animated">
             <img class="item-port-img" src="img/img9.png"/>
               <div class="desc-item">
@@ -175,7 +175,7 @@
     </div>
     <div class="content-tab noshow-page" id="tabs-2" name="1">
       <ul id="Grid">
-        <li class="item-port show-item hvr-grow first-row" name="habitacional" data-id="10"  >
+        <li class="item-port show-item hvr-grow first-row habitacional all" data-id="10"  >
           <div class="item-port-content first-row-item animated">
             <img class="item-port-img" src="img/img11.png"/>
               <div class="desc-item">
@@ -186,7 +186,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow first-row" name="interiorismo" data-id="11"  >
+        <li class="item-port show-item hvr-grow first-row interiorismo all" data-id="11"  >
           <div class="item-port-content first-row-item animated">
             <img class="item-port-img" src="img/img10.png"/>
               <div class="desc-item">
@@ -197,7 +197,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow first-row" name="comercial" data-id="12"  >
+        <li class="item-port show-item hvr-grow first-row comercial all" data-id="12"  >
           <div class="item-port-content first-row-item animated">
             <img class="item-port-img" src="img/img9.png"/>
               <div class="desc-item">
@@ -208,7 +208,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item  hvr-grow second-row" name="design" data-id="13" >
+        <li class="item-port show-item  hvr-grow second-row design all" data-id="13" >
           <div class="item-port-content second-row-item animated">
             <img class="item-port-img" src="img/img8.png"/>
               <div class="desc-item">
@@ -219,7 +219,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow second-row" name="habitacional" data-id="14" >
+        <li class="item-port show-item hvr-grow second-row habitacional all" data-id="14" >
           <div class="item-port-content second-row-item animated">
             <img class="item-port-img" src="img/img7.png"/>
               <div class="desc-item">
@@ -230,7 +230,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow second-row" name="interiorismo" data-id="15" >
+        <li class="item-port show-item hvr-grow second-row interiorismo all" data-id="15" >
           <div class="item-port-content second-row-item animated">
             <img class="item-port-img" src="img/img6.png"/>
               <div class="desc-item">
@@ -241,7 +241,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow third-row" name="comercial" data-id="16">
+        <li class="item-port show-item hvr-grow third-row comercial all" data-id="16">
           <div class="item-port-content third-row-item animated">
             <img class="item-port-img" src="img/img4.png"/>
               <div class="desc-item">
@@ -252,7 +252,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow third-row" name="habitacional" data-id="17">
+        <li class="item-port show-item hvr-grow third-row habitacional all" data-id="17">
           <div class="item-port-content third-row-item animated">
             <img class="item-port-img" src="img/img3.png"/>
               <div class="desc-item">
@@ -263,7 +263,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow third-row" name="design" data-id="18">
+        <li class="item-port show-item hvr-grow third-row design all" data-id="18">
           <div class="item-port-content third-row-item animated">
             <img class="item-port-img" src="img/img2.png"/>
               <div class="desc-item">
@@ -279,7 +279,7 @@
     </div>
     <div class="content-tab noshow-page" id="tabs-3" name="2">
       <ul id="Grid">
-        <li class="item-port show-item hvr-grow first-row" name="habitacional" data-id="19" >
+        <li class="item-port show-item hvr-grow first-row habitacional all" data-id="19" >
           <div class="item-port-content first-row-item animated">
             <img class="item-port-img" src="img/img6.png"/>
               <div class="desc-item">
@@ -290,7 +290,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow first-row" name="interiorismo" data-id="20"  >
+        <li class="item-port show-item hvr-grow first-row interiorismo all" data-id="20"  >
           <div class="item-port-content first-row-item animated">
             <img class="item-port-img" src="img/img7.png"/>
               <div class="desc-item">
@@ -301,7 +301,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow first-row" name="comercial"  data-id="21">
+        <li class="item-port show-item hvr-grow first-row comercial"  data-id="21">
           <div class="item-port-content first-row-item animated">
             <img class="item-port-img" src="img/img8.png"/>
               <div class="desc-item">
@@ -312,7 +312,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item  hvr-grow second-row" name="design" data-id="22">
+        <li class="item-port show-item  hvr-grow second-row design all" data-id="22">
           <div class="item-port-content second-row-item animated">
             <img class="item-port-img" src="img/img9.png"/>
               <div class="desc-item">
@@ -323,7 +323,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow second-row" name="habitacional" data-id="23" >
+        <li class="item-port show-item hvr-grow second-row habitacional all" data-id="23" >
           <div class="item-port-content second-row-item animated">
             <img class="item-port-img" src="img/img10.png"/>
               <div class="desc-item">
@@ -334,7 +334,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow second-row" name="interiorismo" data-id="24" >
+        <li class="item-port show-item hvr-grow second-row interiorismo all" data-id="24" >
           <div class="item-port-content second-row-item animated">
             <img class="item-port-img" src="img/img11.png"/>
               <div class="desc-item">
@@ -345,7 +345,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow third-row" name="comercial" data-id="25" >
+        <li class="item-port show-item hvr-grow third-row comercial all" data-id="25" >
           <div class="item-port-content third-row-item animated">
             <img class="item-port-img" src="img/img1.png"/>
               <div class="desc-item">
@@ -356,7 +356,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow third-row" name="habitacional" data-id="26">
+        <li class="item-port show-item hvr-grow third-row habitacional all all" data-id="26">
           <div class="item-port-content third-row-item animated">
             <img class="item-port-img" src="img/img2.png"/>
               <div class="desc-item">
@@ -367,7 +367,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow third-row" name="design" data-id="27">
+        <li class="item-port show-item hvr-grow third-row design all all" data-id="27">
           <div class="item-port-content third-row-item animated">
             <img class="item-port-img" src="img/img3.png"/>
               <div class="desc-item">
@@ -382,7 +382,7 @@
     </div>
     <div class="content-tab noshow-page" id="tabs-4" name="3">
       <ul id="Grid">
-        <li class="item-port show-item hvr-grow first-row" name="habitacional" data-id="28" >
+        <li class="item-port show-item hvr-grow first-row habitacional all all" data-id="28" >
           <div class="item-port-content first-row-item animated">
             <img class="item-port-img" src="img/img6.png"/>
               <div class="desc-item">
@@ -393,7 +393,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow first-row" name="interiorismo" data-id="29"  >
+        <li class="item-port show-item hvr-grow first-row interiorismo all" data-id="29"  >
           <div class="item-port-content first-row-item animated">
             <img class="item-port-img" src="img/img4.png"/>
               <div class="desc-item">
@@ -404,7 +404,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow first-row" name="comercial" data-id="30"  >
+        <li class="item-port show-item hvr-grow first-row comercial all" data-id="30"  >
           <div class="item-port-content first-row-item animated">
             <img class="item-port-img" src="img/img3.png"/>
               <div class="desc-item">
@@ -415,7 +415,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item  hvr-grow second-row" name="design" data-id="31" >
+        <li class="item-port show-item  hvr-grow second-row design all" data-id="31" >
           <div class="item-port-content second-row-item animated">
             <img class="item-port-img" src="img/img2.png"/>
               <div class="desc-item">
@@ -426,7 +426,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow second-row" name="habitacional" data-id="32" >
+        <li class="item-port show-item hvr-grow second-row habitacional all" data-id="32" >
           <div class="item-port-content second-row-item animated">
             <img class="item-port-img" src="img/img1.png"/>
               <div class="desc-item">
@@ -437,7 +437,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow second-row" name="interiorismo" data-id="33" >
+        <li class="item-port show-item hvr-grow second-row interiorismo all" data-id="33" >
           <div class="item-port-content second-row-item animated">
             <img class="item-port-img" src="img/img11.png"/>
               <div class="desc-item">
@@ -448,7 +448,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow third-row" name="comercial" data-id="34" >
+        <li class="item-port show-item hvr-grow third-row comercial all" data-id="34" >
           <div class="item-port-content third-row-item animated">
             <img class="item-port-img" src="img/img10.png"/>
               <div class="desc-item">
@@ -459,7 +459,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow third-row" name="habitacional" data-id="35">
+        <li class="item-port show-item hvr-grow third-row habitacional all" data-id="35">
           <div class="item-port-content third-row-item animated">
             <img class="item-port-img" src="img/img9.png"/>
               <div class="desc-item">
@@ -470,7 +470,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow third-row" name="design" data-id="36">
+        <li class="item-port show-item hvr-grow third-row design all" data-id="36">
           <div class="item-port-content third-row-item animated">
             <img class="item-port-img" src="img/img8.png"/>
               <div class="desc-item">
@@ -485,7 +485,7 @@
     </div>
     <div class="content-tab noshow-page" id="tabs-5" name="4">
       <ul id="Grid">
-        <li class="item-port show-item hvr-grow first-row" name="habitacional" data-id="37">
+        <li class="item-port show-item hvr-grow first-row habitacional all" data-id="37">
           <div class="item-port-content first-row-item animated">
             <img class="item-port-img" src="img/img1.png"/>
               <div class="desc-item">
@@ -496,7 +496,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow first-row" name="interiorismo"  data-id="38">
+        <li class="item-port show-item hvr-grow first-row interiorismo"  data-id="38">
           <div class="item-port-content first-row-item animated">
             <img class="item-port-img" src="img/img2.png"/>
               <div class="desc-item">
@@ -507,7 +507,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow first-row" name="comercial"  data-id="39">
+        <li class="item-port show-item hvr-grow first-row comercial"  data-id="39">
           <div class="item-port-content first-row-item animated">
             <img class="item-port-img" src="img/img3.png"/>
               <div class="desc-item">
@@ -518,7 +518,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item  hvr-grow second-row" name="design" data-id="40">
+        <li class="item-port show-item  hvr-grow second-row design all" data-id="40">
           <div class="item-port-content second-row-item animated">
             <img class="item-port-img" src="img/img4.png"/>
               <div class="desc-item">
@@ -529,7 +529,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow second-row" name="habitacional" data-id="41" >
+        <li class="item-port show-item hvr-grow second-row habitacional all" data-id="41" >
           <div class="item-port-content second-row-item animated">
             <img class="item-port-img" src="img/img10.png"/>
               <div class="desc-item">
@@ -540,7 +540,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow second-row" name="interiorismo" data-id="42">
+        <li class="item-port show-item hvr-grow second-row interiorismo all" data-id="42">
           <div class="item-port-content second-row-item animated">
             <img class="item-port-img" src="img/img6.png"/>
               <div class="desc-item">
@@ -551,7 +551,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow third-row" name="comercial" data-id="43" >
+        <li class="item-port show-item hvr-grow third-row comercial all" data-id="43" >
           <div class="item-port-content third-row-item animated">
             <img class="item-port-img" src="img/img7.png"/>
               <div class="desc-item">
@@ -562,7 +562,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow third-row" name="habitacional" data-id="44">
+        <li class="item-port show-item hvr-grow third-row habitacional all" data-id="44">
           <div class="item-port-content third-row-item animated">
             <img class="item-port-img" src="img/img8.png"/>
               <div class="desc-item">
@@ -573,7 +573,7 @@
           </div>
         </li>
 
-        <li class="item-port show-item hvr-grow third-row" name="design" data-id="45">
+        <li class="item-port show-item hvr-grow third-row design all" data-id="45">
           <div class="item-port-content third-row-item animated">
             <img class="item-port-img" src="img/img9.png"/>
               <div class="desc-item">
