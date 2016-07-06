@@ -281,5 +281,67 @@
     }
   </script>
 
+  <!-- firefox fix -->
+  <script type="text/javascript">
+    var windowWidth = $(window).width();
+    if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+      $('.info-left, .info-right').addClass('desktop-slider')
+      var popHeight = $(".info-left").width();
+      $('.touch-slider').css("width", popHeight);
+
+
+      $( ".services-elem,.ver-mas" ).click(function() {
+      $('.info-left, .info-right').addClass('desktop-slider')
+        var popHeight = $(".info-left").width();
+        $('.touch-slider').css("width", popHeight);
+      });
+
+      $( window ).click(function() {
+      $('.info-left, .info-right').addClass('desktop-slider')
+        var popHeight = $(".info-left").width();
+        $('.touch-slider').css("width", popHeight);
+      });
+
+      $( window ).resize(function() {
+      $('.info-left, .info-right').addClass('desktop-slider')
+        var popHeight = $(".info-left").width();
+        $('.touch-slider').css("width", popHeight);
+      });
+
+      ( window ).resize(function() {
+      $('.info-left, .info-right').addClass('desktop-slider')
+        var popHeight = $(".info-left").width();
+        $('.touch-slider').css("width", popHeight);
+
+        $( ".services-elem,.ver-mas" ).click(function() {
+          $('.info-left, .info-right').addClass('desktop-slider')
+          var popHeight = $(".info-left").width();
+          $('.touch-slider').css("width", popHeight);
+        });
+
+        $( window ).resize(function() {
+          $('.info-left, .info-right').addClass('desktop-slider')
+          var popHeight = $(".info-left").width();
+          $('.touch-slider').css("width", popHeight);
+        });
+      });
+
+      if (windowWidth < 999) {
+      $('.info-left, .info-right').removeClass('desktop-slider-slider')
+      $('.info-left, .info-right').addClass('mobile-slider')
+        var popHeight = $(".info-left").width();
+        $('.touch-slider').css("width", popHeight);
+      }
+      else {
+        $('.info-left, .info-right').removeClass('mobile-slider')
+        $('.info-left, .info-right').addClass('desktop-slider')
+          var popHeight = $(".info-left").width();
+          $('.touch-slider').css("width", popHeight);
+      }
+
+    }
+  </script>
+
+
 </body>
 </html>
